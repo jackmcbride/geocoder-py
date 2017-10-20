@@ -24,7 +24,7 @@ def success():
                 return render_template("index.html",
                 text="Please make sure you have an address column in your csv file!")
             else:    
-                return render_template("index.html",
+                return render_template("success.html",
                 table="table_frame.html", btns="button_panel.html")
         else:
             return render_template("index.html",
@@ -32,12 +32,12 @@ def success():
 
 @app.route('/table')
 def table():
-    return render_template("index.html", table="table_frame.html", 
+    return render_template("success.html", table="table_frame.html", 
     download_btn="download.html", btns="button_panel.html")
 
 @app.route('/map')
 def map():
-    return render_template("index.html", map="map_frame.html", 
+    return render_template("success.html", map="map_frame.html", 
     download_btn="download.html", btns="button_panel.html")
 
 @app.route('/geo_map')

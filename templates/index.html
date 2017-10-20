@@ -2,28 +2,29 @@
 <html lang="en">
     <title>Geocoder</title>
     <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href = "../static/main.css" rel="stylesheet"/> 
     </head>
     <body>
-        <div class = "container">
-            <h1>Super Geocoder</h1>
-            <h3>Please upload your CSV file. The values containing addresses should be in a column named <i>address</i> or <i>Address</i></h3>
-            <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
-                <input type="file" name="file">
-                <button type="submit"> Submit </button>
-            </form>
-            <div class = "data">
-                {% include table ignore missing %}
-                {% include map ignore missing %}
-            </div>
-            <div class = "buttons">
-                {% include btns ignore missing %}
-                <br>
-                {% include download_btn ignore missing %}
-            </div>
-            <div class="message">
-                {{text | safe}}
-            </div>
+        <div class="interface">
+            <div class="container">
+                <div class="content"></div>
+                    <h1>Super Geocoder</h1>
+                    <h4>Please upload your CSV file. The values containing addresses should be in a column named <i>address</i> or <i>Address</i></h4>
+                    <form action="{{url_for('success')}}" method="POST"enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="uploader">
+                                <strong>Select your address file:</strong>
+                            </label>
+                            <input type="file" class="form-control" name="file" aria-describedby="uploaderHelp" required>
+                            <small id="guesshelp" class="form-text text-muted">
+                                {{text | safe}}
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary"> Upload </button>
+                    </form>
+                </div>
         </div>
     </body>
 </html>

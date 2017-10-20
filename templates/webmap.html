@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_e418bda40995401aabaa9b2ff54de925 {
+            <style> #map_4c1f9f5f4c2141c5a3e1afd9c6d15309 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -27,7 +27,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_e418bda40995401aabaa9b2ff54de925" ></div>
+            <div class="folium-map" id="map_4c1f9f5f4c2141c5a3e1afd9c6d15309" ></div>
         
 </body>
 <script>    
@@ -37,10 +37,10 @@
                 var bounds = null;
             
 
-            var map_e418bda40995401aabaa9b2ff54de925 = L.map(
-                                  'map_e418bda40995401aabaa9b2ff54de925',
-                                  {center: [51.5504406,0.040202],
-                                  zoom: 9,
+            var map_4c1f9f5f4c2141c5a3e1afd9c6d15309 = L.map(
+                                  'map_4c1f9f5f4c2141c5a3e1afd9c6d15309',
+                                  {center: [37.756648,-122.429375],
+                                  zoom: 11,
                                   maxBounds: bounds,
                                   layers: [],
                                   worldCopyJump: false,
@@ -49,7 +49,7 @@
             
         
     
-            var tile_layer_b7e5f2e2bf6044738c99767c5f59554a = L.tileLayer(
+            var tile_layer_291c18db77084b5b86482691b259d1fb = L.tileLayer(
                 'https://{s}.tiles.mapbox.com/v3/mapbox.world-bright/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -59,15 +59,48 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_e418bda40995401aabaa9b2ff54de925);
+                ).addTo(map_4c1f9f5f4c2141c5a3e1afd9c6d15309);
         
     
-            var feature_group_253d5acbd9bf414a99dd997b012700f7 = L.featureGroup(
-                ).addTo(map_e418bda40995401aabaa9b2ff54de925);
+            var feature_group_cd9bf76d9cb344de95067e202b6f110d = L.featureGroup(
+                ).addTo(map_4c1f9f5f4c2141c5a3e1afd9c6d15309);
         
     
-            var circle_marker_dcab310dbae443b2bb317b47399c7e12 = L.circleMarker(
-                [51.5504406,0.040202],
+            var circle_marker_b779a7645d814b18bcc21e9689ffc601 = L.circleMarker(
+                [37.756648,-122.429375],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3388ff",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_cd9bf76d9cb344de95067e202b6f110d);
+            
+    
+            var popup_7475c37f54634352a9a01a6112d50f64 = L.popup({maxWidth: '300'});
+
+            
+                var html_5f3f1ca3d5004f00b7d21f3002367251 = $('<div id="html_5f3f1ca3d5004f00b7d21f3002367251" style="width: 100.0%; height: 100.0%;">Madeira: 3666 21st St San Francisco CA 94114 USA, Employees: 8</div>')[0];
+                popup_7475c37f54634352a9a01a6112d50f64.setContent(html_5f3f1ca3d5004f00b7d21f3002367251);
+            
+
+            circle_marker_b779a7645d814b18bcc21e9689ffc601.bindPopup(popup_7475c37f54634352a9a01a6112d50f64);
+
+            
+        
+    
+            var circle_marker_6d809fa65cd0414a806f328ec70ba760 = L.circleMarker(
+                [37.757819,-122.425337],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -84,188 +117,23 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
+                ).addTo(feature_group_cd9bf76d9cb344de95067e202b6f110d);
             
     
-            var popup_d2d5a3d24e03408691b0c6b9cf0d6def = L.popup({maxWidth: '300'});
+            var popup_f2b806712cfb482588e868aef984c222 = L.popup({maxWidth: '300'});
 
             
-                var html_6133245783904cd5a782bfb2a0268ed6 = $('<div id="html_6133245783904cd5a782bfb2a0268ed6" style="width: 100.0%; height: 100.0%;">BRANDON TANDOORI LTD: 43 Clarence Road Manor Park London E125BB, Employees: 124</div>')[0];
-                popup_d2d5a3d24e03408691b0c6b9cf0d6def.setContent(html_6133245783904cd5a782bfb2a0268ed6);
+                var html_b8d02b0509734404a72502fa9482615b = $('<div id="html_b8d02b0509734404a72502fa9482615b" style="width: 100.0%; height: 100.0%;">Bready Shop: 735 Dolores St San Francisco CA 94119 USA, Employees: 15</div>')[0];
+                popup_f2b806712cfb482588e868aef984c222.setContent(html_b8d02b0509734404a72502fa9482615b);
             
 
-            circle_marker_dcab310dbae443b2bb317b47399c7e12.bindPopup(popup_d2d5a3d24e03408691b0c6b9cf0d6def);
+            circle_marker_6d809fa65cd0414a806f328ec70ba760.bindPopup(popup_f2b806712cfb482588e868aef984c222);
 
             
         
     
-            var circle_marker_99e09dd58d77481a8111ab16811e7ec7 = L.circleMarker(
-                [51.5695623,-0.2355905],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "yellow",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_54361755cd9e4c12af11590568bd1725 = L.popup({maxWidth: '300'});
-
-            
-                var html_10b586a2c6964f49adad7af8353caa52 = $('<div id="html_10b586a2c6964f49adad7af8353caa52" style="width: 100.0%; height: 100.0%;">BRANDONE MACHINE TOOL LIMITED: Unit A24 The Big Yellow 1000 North Circular Road London NW27JP, Employees: 83</div>')[0];
-                popup_54361755cd9e4c12af11590568bd1725.setContent(html_10b586a2c6964f49adad7af8353caa52);
-            
-
-            circle_marker_99e09dd58d77481a8111ab16811e7ec7.bindPopup(popup_54361755cd9e4c12af11590568bd1725);
-
-            
-        
-    
-            var circle_marker_16b1f10c5d4d4954aac2b36cb0249d4a = L.circleMarker(
-                [51.6091337,-0.1511145],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_56b8ac086cfd4a329c032ab4f1bb926d = L.popup({maxWidth: '300'});
-
-            
-                var html_71e4bf8b3a784b2fb522a9537558441d = $('<div id="html_71e4bf8b3a784b2fb522a9537558441d" style="width: 100.0%; height: 100.0%;">BRANDONMAX LIMITED: 35 Firs Avenue London United Kingdom N113NE, Employees: 102</div>')[0];
-                popup_56b8ac086cfd4a329c032ab4f1bb926d.setContent(html_71e4bf8b3a784b2fb522a9537558441d);
-            
-
-            circle_marker_16b1f10c5d4d4954aac2b36cb0249d4a.bindPopup(popup_56b8ac086cfd4a329c032ab4f1bb926d);
-
-            
-        
-    
-            var circle_marker_b62de15830f14200b5f1af58c9dcc2bb = L.circleMarker(
-                [51.5053298,-0.0883445],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_445de37e90134cddbc6476e092a13923 = L.popup({maxWidth: '300'});
-
-            
-                var html_3ad38b2f4c5d4f0ba99fdb8317104430 = $('<div id="html_3ad38b2f4c5d4f0ba99fdb8317104430" style="width: 100.0%; height: 100.0%;">BRANDONSTEAD LIMITED: Bridge House London Bridge London SE19QR, Employees: 39</div>')[0];
-                popup_445de37e90134cddbc6476e092a13923.setContent(html_3ad38b2f4c5d4f0ba99fdb8317104430);
-            
-
-            circle_marker_b62de15830f14200b5f1af58c9dcc2bb.bindPopup(popup_445de37e90134cddbc6476e092a13923);
-
-            
-        
-    
-            var circle_marker_586d610f2bb044df9d9287765286f350 = L.circleMarker(
-                [51.5279818,-0.0785211],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "yellow",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_e87010d933584f8b91d8615764fa146f = L.popup({maxWidth: '300'});
-
-            
-                var html_6b94ec806b7246e4b1ca50b7442b5456 = $('<div id="html_6b94ec806b7246e4b1ca50b7442b5456" style="width: 100.0%; height: 100.0%;">BRANDOO LTD: 27 Drysdale Street London N16ND, Employees: 89</div>')[0];
-                popup_e87010d933584f8b91d8615764fa146f.setContent(html_6b94ec806b7246e4b1ca50b7442b5456);
-            
-
-            circle_marker_586d610f2bb044df9d9287765286f350.bindPopup(popup_e87010d933584f8b91d8615764fa146f);
-
-            
-        
-    
-            var circle_marker_a1bd9e4820ba4df9bacc611cad45dca2 = L.circleMarker(
-                [51.5231294,-0.0979413],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "yellow",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_1a0c16c8059f4362b85ee7477de0b699 = L.popup({maxWidth: '300'});
-
-            
-                var html_2e6f8e36d31840b086f0282a33e40e4f = $('<div id="html_2e6f8e36d31840b086f0282a33e40e4f" style="width: 100.0%; height: 100.0%;">BRANDOPUS HOLDINGS LIMITED: Devonshire House 60 Goswell Road London EC1M7AD, Employees: 90</div>')[0];
-                popup_1a0c16c8059f4362b85ee7477de0b699.setContent(html_2e6f8e36d31840b086f0282a33e40e4f);
-            
-
-            circle_marker_a1bd9e4820ba4df9bacc611cad45dca2.bindPopup(popup_1a0c16c8059f4362b85ee7477de0b699);
-
-            
-        
-    
-            var circle_marker_8c3aff6bcff34141a15a7ac2da2eb5b1 = L.circleMarker(
-                [51.5231294,-0.0979413],
+            var circle_marker_38193be3ca5a4eb39552979c48f5facf = L.circleMarker(
+                [37.755875,-122.428816],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -282,23 +150,23 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
+                ).addTo(feature_group_cd9bf76d9cb344de95067e202b6f110d);
             
     
-            var popup_91c9e99a895d4f6fb95d8d7dd1e12ca4 = L.popup({maxWidth: '300'});
+            var popup_3d5031cbc22f4c1aacd3f0e5f1b81b80 = L.popup({maxWidth: '300'});
 
             
-                var html_a0141de1de594e198f611df0aa417c6e = $('<div id="html_a0141de1de594e198f611df0aa417c6e" style="width: 100.0%; height: 100.0%;">BRANDOPUS LLP: Devonshire House 60 Goswell Road London EC1M7AD, Employees: 170</div>')[0];
-                popup_91c9e99a895d4f6fb95d8d7dd1e12ca4.setContent(html_a0141de1de594e198f611df0aa417c6e);
+                var html_20b7cf337bed48c98d02929f2a80d31c = $('<div id="html_20b7cf337bed48c98d02929f2a80d31c" style="width: 100.0%; height: 100.0%;">Super River: 332 Hill St San Francisco California 94114 USA, Employees: 25</div>')[0];
+                popup_3d5031cbc22f4c1aacd3f0e5f1b81b80.setContent(html_20b7cf337bed48c98d02929f2a80d31c);
             
 
-            circle_marker_8c3aff6bcff34141a15a7ac2da2eb5b1.bindPopup(popup_91c9e99a895d4f6fb95d8d7dd1e12ca4);
+            circle_marker_38193be3ca5a4eb39552979c48f5facf.bindPopup(popup_3d5031cbc22f4c1aacd3f0e5f1b81b80);
 
             
         
     
-            var circle_marker_348861038822477aab11f78c816eea7a = L.circleMarker(
-                [51.3499792,-0.100566],
+            var circle_marker_a78cacd1a03247279afe59ee63641028 = L.circleMarker(
+                [37.7529353,-122.4317224],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -315,320 +183,23 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
+                ).addTo(feature_group_cd9bf76d9cb344de95067e202b6f110d);
             
     
-            var popup_cf819a43dd6b41ec98cce969282db7c7 = L.popup({maxWidth: '300'});
+            var popup_6b6538bd77034af188858eecdf2808f2 = L.popup({maxWidth: '300'});
 
             
-                var html_c9eb3c159fe94423bed2886bb5b10909 = $('<div id="html_c9eb3c159fe94423bed2886bb5b10909" style="width: 100.0%; height: 100.0%;">BRANDORA LIMITED: Progress House 404 Brighton Road South Croydon Surrey CR26AN, Employees: 81</div>')[0];
-                popup_cf819a43dd6b41ec98cce969282db7c7.setContent(html_c9eb3c159fe94423bed2886bb5b10909);
+                var html_68d9d2fa4ae34b8e8d06507f0f9b785c = $('<div id="html_68d9d2fa4ae34b8e8d06507f0f9b785c" style="width: 100.0%; height: 100.0%;">Ben’s Shop: 3995 23rd St San Francisco CA 94114 USA, Employees: 10</div>')[0];
+                popup_6b6538bd77034af188858eecdf2808f2.setContent(html_68d9d2fa4ae34b8e8d06507f0f9b785c);
             
 
-            circle_marker_348861038822477aab11f78c816eea7a.bindPopup(popup_cf819a43dd6b41ec98cce969282db7c7);
+            circle_marker_a78cacd1a03247279afe59ee63641028.bindPopup(popup_6b6538bd77034af188858eecdf2808f2);
 
             
         
     
-            var circle_marker_fb53daa1eaab49cdb7f2fd3358649dc3 = L.circleMarker(
-                [51.580184,-0.33315],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_d3ae0fbe953d4275badc95702c598537 = L.popup({maxWidth: '300'});
-
-            
-                var html_a97aa585c0c9493ea6893e8b3b1add58 = $('<div id="html_a97aa585c0c9493ea6893e8b3b1add58" style="width: 100.0%; height: 100.0%;">BRANDOUTLET LIMITED: 4th Floor, Suite 2 B Congress House Lyon Road Harrow Middlesex HA12EN, Employees: 106</div>')[0];
-                popup_d3ae0fbe953d4275badc95702c598537.setContent(html_a97aa585c0c9493ea6893e8b3b1add58);
-            
-
-            circle_marker_fb53daa1eaab49cdb7f2fd3358649dc3.bindPopup(popup_d3ae0fbe953d4275badc95702c598537);
-
-            
-        
-    
-            var circle_marker_3ee8392d24354ce0938e9a44246063f5 = L.circleMarker(
-                [51.4920614,-0.2625987],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_aa1282b9a83541e3a6ffa7b81aa52c74 = L.popup({maxWidth: '300'});
-
-            
-                var html_38e14f025f18482a814e1cae5248e5fe = $('<div id="html_38e14f025f18482a814e1cae5248e5fe" style="width: 100.0%; height: 100.0%;">BRANDOW LTD: 277-279 Chiswick High Road London England W44PU, Employees: 43</div>')[0];
-                popup_aa1282b9a83541e3a6ffa7b81aa52c74.setContent(html_38e14f025f18482a814e1cae5248e5fe);
-            
-
-            circle_marker_3ee8392d24354ce0938e9a44246063f5.bindPopup(popup_aa1282b9a83541e3a6ffa7b81aa52c74);
-
-            
-        
-    
-            var circle_marker_fd474a9dc0d645fcad3b19c2aabbbb2d = L.circleMarker(
-                [51.507721,-0.1382871],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_308e40ed0f4c46a493c8821c474882d6 = L.popup({maxWidth: '300'});
-
-            
-                var html_3c24be28d13a421c8f2569c7f8271763 = $('<div id="html_3c24be28d13a421c8f2569c7f8271763" style="width: 100.0%; height: 100.0%;">BRANDPIPE LTD: Dukes Court 32 Duke Street London SW1Y6DF, Employees: 42</div>')[0];
-                popup_308e40ed0f4c46a493c8821c474882d6.setContent(html_3c24be28d13a421c8f2569c7f8271763);
-            
-
-            circle_marker_fd474a9dc0d645fcad3b19c2aabbbb2d.bindPopup(popup_308e40ed0f4c46a493c8821c474882d6);
-
-            
-        
-    
-            var circle_marker_2cc03b8ad19c4b0fa72aaed39414c25c = L.circleMarker(
-                [51.5001889,-0.0729491],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "red",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_ecda87ed58874f4aba12cd88686fd115 = L.popup({maxWidth: '300'});
-
-            
-                var html_3fe0efd79ae24002b7c5bb70c2500aaf = $('<div id="html_3fe0efd79ae24002b7c5bb70c2500aaf" style="width: 100.0%; height: 100.0%;">BRANDPOINT DESIGN LIMITED: C/O Montgomery Swann Ltd Scotts Sufferance Wharf 1 Mill Street London SE12DE, Employees: 169</div>')[0];
-                popup_ecda87ed58874f4aba12cd88686fd115.setContent(html_3fe0efd79ae24002b7c5bb70c2500aaf);
-            
-
-            circle_marker_2cc03b8ad19c4b0fa72aaed39414c25c.bindPopup(popup_ecda87ed58874f4aba12cd88686fd115);
-
-            
-        
-    
-            var circle_marker_de3d7c2f21e24ca9aed5b34eb5eb77fd = L.circleMarker(
-                [51.5206271,-0.1371981],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_0b85fb7780c6480fbfdf41838b9b5c19 = L.popup({maxWidth: '300'});
-
-            
-                var html_07c4e2384a474f98b755f025a44061c0 = $('<div id="html_07c4e2384a474f98b755f025a44061c0" style="width: 100.0%; height: 100.0%;">BRANDPOOL LIMITED: 97 Charlotte Street London England W1T4QA, Employees: 105</div>')[0];
-                popup_0b85fb7780c6480fbfdf41838b9b5c19.setContent(html_07c4e2384a474f98b755f025a44061c0);
-            
-
-            circle_marker_de3d7c2f21e24ca9aed5b34eb5eb77fd.bindPopup(popup_0b85fb7780c6480fbfdf41838b9b5c19);
-
-            
-        
-    
-            var circle_marker_92c98da1fb5a46cdbd478134a35d47b0 = L.circleMarker(
-                [51.5349841,-0.0861324],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_f4fe674ba1614e0e9618c518e4d15768 = L.popup({maxWidth: '300'});
-
-            
-                var html_920c0257e7c743339a5ed6ea8ff7b644 = $('<div id="html_920c0257e7c743339a5ed6ea8ff7b644" style="width: 100.0%; height: 100.0%;">BRANDPROX LIMITED: 43 Grange Street Bridport Place London England N15JN, Employees: 25</div>')[0];
-                popup_f4fe674ba1614e0e9618c518e4d15768.setContent(html_920c0257e7c743339a5ed6ea8ff7b644);
-            
-
-            circle_marker_92c98da1fb5a46cdbd478134a35d47b0.bindPopup(popup_f4fe674ba1614e0e9618c518e4d15768);
-
-            
-        
-    
-            var circle_marker_5f3f60bf0f20469491a44f46b2998943 = L.circleMarker(
-                [51.4998909,-0.0813905],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_b2dd158622194f7c96b355a05e6b1413 = L.popup({maxWidth: '300'});
-
-            
-                var html_9f66045503c14f3b815c2dba631f4f4b = $('<div id="html_9f66045503c14f3b815c2dba631f4f4b" style="width: 100.0%; height: 100.0%;">BRANDPUBLISHER LIMITED: C/O Keith Reynolds Associates 135 Bermondsey Street London SE13UW, Employees: 27</div>')[0];
-                popup_b2dd158622194f7c96b355a05e6b1413.setContent(html_9f66045503c14f3b815c2dba631f4f4b);
-            
-
-            circle_marker_5f3f60bf0f20469491a44f46b2998943.bindPopup(popup_b2dd158622194f7c96b355a05e6b1413);
-
-            
-        
-    
-            var circle_marker_6e6fca62bd6e43dc9d4945c79b23d75e = L.circleMarker(
-                [51.4462841,-0.3019054],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "red",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_f625ee03aba14ab68f0be3a4bdf60a07 = L.popup({maxWidth: '300'});
-
-            
-                var html_86a7d60c39e7418c9257bf9aa1ec4915 = $('<div id="html_86a7d60c39e7418c9257bf9aa1ec4915" style="width: 100.0%; height: 100.0%;">BRANDRAM MEWS MANAGEMENT LIMITED: 195 Petersham Road Richmond Surrey TW107AW, Employees: 146</div>')[0];
-                popup_f625ee03aba14ab68f0be3a4bdf60a07.setContent(html_86a7d60c39e7418c9257bf9aa1ec4915);
-            
-
-            circle_marker_6e6fca62bd6e43dc9d4945c79b23d75e.bindPopup(popup_f625ee03aba14ab68f0be3a4bdf60a07);
-
-            
-        
-    
-            var circle_marker_d2586a29e3c14058998e7a5ceef9e533 = L.circleMarker(
-                [51.501897,-0.0531104],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_7d73d471d0164220ac29a6141fd0ef14 = L.popup({maxWidth: '300'});
-
-            
-                var html_1b4cdbbf70624c1090735f6524e2786c = $('<div id="html_1b4cdbbf70624c1090735f6524e2786c" style="width: 100.0%; height: 100.0%;">BRANDRAMS HOUSING CO-OPERATIVE LIMITED: Brandrams Wharf 127-131 Rotherhithe Street London SE164NF, Employees: 14</div>')[0];
-                popup_7d73d471d0164220ac29a6141fd0ef14.setContent(html_1b4cdbbf70624c1090735f6524e2786c);
-            
-
-            circle_marker_d2586a29e3c14058998e7a5ceef9e533.bindPopup(popup_7d73d471d0164220ac29a6141fd0ef14);
-
-            
-        
-    
-            var circle_marker_6c59082e912141a7a50ba968348220e7 = L.circleMarker(
-                [51.4959175,-0.1366917],
+            var circle_marker_69e5196cfb9443388078aaed0140f472 = L.circleMarker(
+                [37.752131,-122.430028],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -645,262 +216,31 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
+                ).addTo(feature_group_cd9bf76d9cb344de95067e202b6f110d);
             
     
-            var popup_928dc26a2bcd463c8c6bcb32010c4081 = L.popup({maxWidth: '300'});
+            var popup_3d1ff454f6d24af2aeff3901769fa574 = L.popup({maxWidth: '300'});
 
             
-                var html_91c2e7727fab433f898aaca05c6ac71d = $('<div id="html_91c2e7727fab433f898aaca05c6ac71d" style="width: 100.0%; height: 100.0%;">BRANDRAPPORT LIMITED: Greencoat House Francis Street London SW1P1DH, Employees: 85</div>')[0];
-                popup_928dc26a2bcd463c8c6bcb32010c4081.setContent(html_91c2e7727fab433f898aaca05c6ac71d);
+                var html_7cdbeef905b14c56bf47924c8caf3080 = $('<div id="html_7cdbeef905b14c56bf47924c8caf3080" style="width: 100.0%; height: 100.0%;">Sanchez: 1056 Sanchez St San Francisco California USA, Employees: 12</div>')[0];
+                popup_3d1ff454f6d24af2aeff3901769fa574.setContent(html_7cdbeef905b14c56bf47924c8caf3080);
             
 
-            circle_marker_6c59082e912141a7a50ba968348220e7.bindPopup(popup_928dc26a2bcd463c8c6bcb32010c4081);
+            circle_marker_69e5196cfb9443388078aaed0140f472.bindPopup(popup_3d1ff454f6d24af2aeff3901769fa574);
 
             
         
     
-            var circle_marker_d1170aa7817446d8bb58a46fa9110f10 = L.circleMarker(
-                [51.5120736,-0.136065],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "red",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_4954ea9d8a734bf9870337a71b240e91 = L.popup({maxWidth: '300'});
-
-            
-                var html_5d04fb907c87456da1666c8518658764 = $('<div id="html_5d04fb907c87456da1666c8518658764" style="width: 100.0%; height: 100.0%;">BRANDREHAB LIMITED: 33 Great Pulteney Street London W1F9NP, Employees: 193</div>')[0];
-                popup_4954ea9d8a734bf9870337a71b240e91.setContent(html_5d04fb907c87456da1666c8518658764);
-            
-
-            circle_marker_d1170aa7817446d8bb58a46fa9110f10.bindPopup(popup_4954ea9d8a734bf9870337a71b240e91);
-
-            
-        
-    
-            var circle_marker_4a330937b7c34ca8bad8d1d58ea86ab7 = L.circleMarker(
-                [51.5662139,-0.1106801],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_2fb068f06d7a441ea6ea6ef0d785651f = L.popup({maxWidth: '300'});
-
-            
-                var html_dd61e4585c714cfd9e6f3f0dd66e4517 = $('<div id="html_dd61e4585c714cfd9e6f3f0dd66e4517" style="width: 100.0%; height: 100.0%;">BRANDRETH ENTERPRISES LTD: 49B Fonthill Road London N43HZ, Employees: 120</div>')[0];
-                popup_2fb068f06d7a441ea6ea6ef0d785651f.setContent(html_dd61e4585c714cfd9e6f3f0dd66e4517);
-            
-
-            circle_marker_4a330937b7c34ca8bad8d1d58ea86ab7.bindPopup(popup_2fb068f06d7a441ea6ea6ef0d785651f);
-
-            
-        
-    
-            var circle_marker_ff77e0ea4775485aa1d9da585af743f0 = L.circleMarker(
-                [51.6175644,-0.3122381],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_5f60b7c576724b32878d3a5766024faf = L.popup({maxWidth: '300'});
-
-            
-                var html_1956833f2b434256b1748200697d3024 = $('<div id="html_1956833f2b434256b1748200697d3024" style="width: 100.0%; height: 100.0%;">BRANDS APPLIED LIMITED: Suite 3, 1st Floor Stanmore House, 15-19 Church Road Stanmore Middlesex HA74AR, Employees: 122</div>')[0];
-                popup_5f60b7c576724b32878d3a5766024faf.setContent(html_1956833f2b434256b1748200697d3024);
-            
-
-            circle_marker_ff77e0ea4775485aa1d9da585af743f0.bindPopup(popup_5f60b7c576724b32878d3a5766024faf);
-
-            
-        
-    
-            var circle_marker_4a87a3299c4c42b282b56be48c0fa834 = L.circleMarker(
-                [51.5234172,-0.1026916],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_d77a3af02367401f81a9986dd095164d = L.popup({maxWidth: '300'});
-
-            
-                var html_4928faa567ec4788af9ddf9d2038b3ce = $('<div id="html_4928faa567ec4788af9ddf9d2038b3ce" style="width: 100.0%; height: 100.0%;">BRANDS AT WORK LTD: 145-157 St John Street London EC1V4PY, Employees: 27</div>')[0];
-                popup_d77a3af02367401f81a9986dd095164d.setContent(html_4928faa567ec4788af9ddf9d2038b3ce);
-            
-
-            circle_marker_4a87a3299c4c42b282b56be48c0fa834.bindPopup(popup_d77a3af02367401f81a9986dd095164d);
-
-            
-        
-    
-            var circle_marker_acd3671f96574e07bd2164dbacad3938 = L.circleMarker(
-                [51.526975,-0.13956],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_1e695c28ee1c4f77909fe97713f1e57a = L.popup({maxWidth: '300'});
-
-            
-                var html_4628818cbca54ebaa535bdb480552c78 = $('<div id="html_4628818cbca54ebaa535bdb480552c78" style="width: 100.0%; height: 100.0%;">BRANDS BANDS AND FANS LIMITED: Acre House 11-15 William Road London England NW13ER, Employees: 30</div>')[0];
-                popup_1e695c28ee1c4f77909fe97713f1e57a.setContent(html_4628818cbca54ebaa535bdb480552c78);
-            
-
-            circle_marker_acd3671f96574e07bd2164dbacad3938.bindPopup(popup_1e695c28ee1c4f77909fe97713f1e57a);
-
-            
-        
-    
-            var circle_marker_a97b9b5e23ae4487986bcf9145c25ea7 = L.circleMarker(
-                [51.512142,-0.1363558],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "green",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_47cd640e118a4499831c7b963f60bce3 = L.popup({maxWidth: '300'});
-
-            
-                var html_b57d7dce731643c3973e24b62472606f = $('<div id="html_b57d7dce731643c3973e24b62472606f" style="width: 100.0%; height: 100.0%;">BRANDS BEYOND LTD: Golden House, 30 Pulteney Street 5th Floor London England W1F9NN, Employees: 17</div>')[0];
-                popup_47cd640e118a4499831c7b963f60bce3.setContent(html_b57d7dce731643c3973e24b62472606f);
-            
-
-            circle_marker_a97b9b5e23ae4487986bcf9145c25ea7.bindPopup(popup_47cd640e118a4499831c7b963f60bce3);
-
-            
-        
-    
-            var circle_marker_dc82b4d3e8cf4768839e1887c268725b = L.circleMarker(
-                [51.4920614,-0.2625987],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_253d5acbd9bf414a99dd997b012700f7);
-            
-    
-            var popup_daac84a0eb904316aa557d6541a86433 = L.popup({maxWidth: '300'});
-
-            
-                var html_504608ec58cb495488c907e94d56aaf8 = $('<div id="html_504608ec58cb495488c907e94d56aaf8" style="width: 100.0%; height: 100.0%;">BRANDS BOUTIQUE LTD: 277-279 Chiswick High Road London W44PU, Employees: 120</div>')[0];
-                popup_daac84a0eb904316aa557d6541a86433.setContent(html_504608ec58cb495488c907e94d56aaf8);
-            
-
-            circle_marker_dc82b4d3e8cf4768839e1887c268725b.bindPopup(popup_daac84a0eb904316aa557d6541a86433);
-
-            
-        
-    
-            var layer_control_e2535abc2fb34fa7a61c91bd101670ee = {
-                base_layers : { "mapboxbright" : tile_layer_b7e5f2e2bf6044738c99767c5f59554a, },
-                overlays : { "Business" : feature_group_253d5acbd9bf414a99dd997b012700f7, }
+            var layer_control_ecaec616fdc743e79001c1139da103cc = {
+                base_layers : { "mapboxbright" : tile_layer_291c18db77084b5b86482691b259d1fb, },
+                overlays : { "Business" : feature_group_cd9bf76d9cb344de95067e202b6f110d, }
                 };
             L.control.layers(
-                layer_control_e2535abc2fb34fa7a61c91bd101670ee.base_layers,
-                layer_control_e2535abc2fb34fa7a61c91bd101670ee.overlays,
+                layer_control_ecaec616fdc743e79001c1139da103cc.base_layers,
+                layer_control_ecaec616fdc743e79001c1139da103cc.overlays,
                 {position: 'topright',
                  collapsed: true,
                  autoZIndex: true
-                }).addTo(map_e418bda40995401aabaa9b2ff54de925);
+                }).addTo(map_4c1f9f5f4c2141c5a3e1afd9c6d15309);
         
 </script>
