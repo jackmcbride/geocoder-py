@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Python Geocoder</title>
+    <head>
+        <link href = "../static/main.css" rel="stylesheet"/> 
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Super Geocoder</h1>
+            <h3>Please upload your CSV file. The values containing addresses should be in a column named <i>address</i> or <i>Address</i></h3>
+            <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit"> Submit </button>
+            </form>
+            <div class = "data">
+                {% include table ignore missing %}
+                {% include map ignore missing %}
+            </div>
+            <div class = "buttons">
+                {% include btns ignore missing %}
+                <br>
+                {% include download_btn ignore missing %}
+            </div>
+            <div class="message">
+                {{text | safe}}
+            </div>
+        </div>
+    </body>
+</html>
