@@ -6,13 +6,13 @@ import math
 
 def color_producer(df, employees):
     if employees < df["employees"].max() * 0.25:
-        return "green"
-    if employees < df["employees"].max() * 0.5:
-        return "yellow"
-    elif employees < df["employees"].max() * 0.75:
-        return "orange"
-    else:
         return "red"
+    if employees < df["employees"].max() * 0.5:
+        return "orange"
+    elif employees < df["employees"].max() * 0.75:
+        return "yellow"
+    else:
+        return "green"
 
 
 def set_zoom(df):

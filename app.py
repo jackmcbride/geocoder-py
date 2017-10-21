@@ -11,7 +11,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", text="Selected file must be a .csv file.")
 
 @app.route('/success', methods=["POST"])
 def success():
@@ -22,13 +22,13 @@ def success():
             file.save("uploads/uploaded" + file.filename)
             if generate_table("uploads/uploaded" + file.filename) == "Error":
                 return render_template("index.html",
-                text="Please make sure you have an address column in your csv file!")
+                text="Make sure you have an column labelled 'Address' or 'address' in your .csv file.")
             else:    
                 return render_template("success.html",
                 table="table_frame.html", btns="button_panel.html")
         else:
             return render_template("index.html",
-            text="Please select a file!")
+            text="Please select a file.")
 
 @app.route('/table')
 def table():

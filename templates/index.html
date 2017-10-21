@@ -2,29 +2,33 @@
 <html lang="en">
     <title>Geocoder</title>
     <head>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link href = "../static/main.css" rel="stylesheet"/> 
+        <link href = "../static/main.css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="../static/images/favicon.ico" />
     </head>
     <body>
-        <div class="interface">
-            <div class="container">
-                <div class="content"></div>
-                    <h1>Super Geocoder</h1>
-                    <h4>Please upload your CSV file. The values containing addresses should be in a column named <i>address</i> or <i>Address</i></h4>
-                    <form action="{{url_for('success')}}" method="POST"enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="uploader">
-                                <strong>Select your address file:</strong>
-                            </label>
-                            <input type="file" class="form-control" name="file" aria-describedby="uploaderHelp" required>
-                            <small id="guesshelp" class="form-text text-muted">
-                                {{text | safe}}
-                            </small>
-                        </div>
-                        <button type="submit" class="btn btn-primary"> Upload </button>
-                    </form>
-                </div>
+        <div class="background"></div>
+            <div class="interface">
+                <div class="container">
+                    <div class="content"></div>
+                        <h1>GeoCoder Py</h1>
+                        <h4>A python geocoding solution.</h4>
+                        <p>This is a python flask application for computing geospatial data from a list of addresses.</p>
+                        <p>To begin, upload a .csv file containing your addresses.
+                        Once complete, download your file updated with the location coordinates, and view the data as a table or folium map.</p>
+                        <form action="{{url_for('success')}}" method="POST"enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="uploader">
+                                    <strong>Select your address file:</strong>
+                                </label>
+                                <input type="file" class="form-control" name="file" aria-describedby="uploaderHelp" required>
+                                <small id="guesshelp" class="form-text text-muted">
+                                        {{ text | safe }}</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary"> Upload </button>
+                        </form>
+                    </div>
         </div>
     </body>
 </html>

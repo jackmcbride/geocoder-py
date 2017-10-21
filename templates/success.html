@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Geocoder</title>
+    <title>Success</title>
     <head>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link href = "../static/main.css" rel="stylesheet"/> 
+        <link href = "../static/main.css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="../static/images/favicon.ico" /> 
     </head>
     <body>
-        <div class="interface">
-            <div class="container">
-                <div class="content"></div>
-                    <h1>Success!</h1>
-                    <h4>Geocoding information for your csv file has been successfully updated, and is ready for download.</h4>
-                    <br>
-                    <a href = "{{url_for('download')}}"> <button class="btn"> Download </button></a>
-                </div>
-            <div class="container">
-                <div class="content">
-                    <h3>Your addresses:</h4>
-                    <div class="data">
-                        {% include table ignore missing %}
-                        {% include map ignore missing %}
+        <div class="background"></div>
+            <div class="interface">
+                <div class="container">
+                    <div class="content"></div>
+                        <h1>Success!</h1>
+                        <h4>Geocoding data for your .csv file has been added.</h4> 
+                        <h4>It is now available to download.</h4>
+                        <br>
+                        <a href = "{{url_for('download')}}"> <button class="btn btn-success"> Download </button></a>
                     </div>
-                    <div class="buttons">
-                        {% include btns ignore missing %}
+                <div class="container">
+                    <div class="content">
+                        <h3>Your addresses:</h4>
+                        <div class="data">
+                            {% include table ignore missing %}
+                            {% include map ignore missing %}
+                        </div>
+                        <div class="buttons">
+                            <br>
+                            {% include btns ignore missing %}
+                        </div>
+                        <br>
+                    <a href = "{{url_for('index')}}"> <button class="btn btn-info"> Back to Main Page </button></a>
                     </div>
-                    <br>
-                <a href = "{{url_for('index')}}"> <button class="btn btn-info"> Back to Main Page </button></a>
                 </div>
             </div>
-        </div>
     </body>
 </html>
