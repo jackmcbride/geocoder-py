@@ -61,14 +61,7 @@ def generate_webmap():
             fgv.add_child(folium.CircleMarker(location=[lt,ln], radius=6,
             popup="%s: %s" % (nm, ad), fill=True, fill_opacity=0.7, fill_color=color_producer(df, em)))
 
-    fgp = folium.FeatureGroup(name="Population")
-    
-    with open("data/world.json", "r", encoding="utf-8-sig") as f:
-        fgp.add_child(folium.GeoJson(data=f.read(), 
-        style_function=lambda x: {'fillColor':'green' if x['properties']['POP2005'] < 10000000 
-        else 'orange' if 10000000 <= x['properties']['POP2005'] < 20000000 else 'red'}))
-    
-    #geo_map.add_child(fgp)
+
     geo_map.add_child(fgv)
     geo_map.add_child(folium.LayerControl())
     geo_map.save("templates/webmap.html")
