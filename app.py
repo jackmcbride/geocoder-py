@@ -30,12 +30,12 @@ def success():
             return render_template("index.html",
             text="Please select a file.")
 
-@app.route('/table', methods=['POST', 'GET'])
+@app.route('/table', methods=['POST'])
 def table():
     return render_template("success.html", table="table_frame.html", 
     download_btn="download.html", btns="button_panel.html")
 
-@app.route('/map', methods=['POST', 'GET'])
+@app.route('/map', methods=['POST'])
 def map():
     return render_template("success.html", map="map_frame.html", 
     download_btn="download.html", btns="button_panel.html")
