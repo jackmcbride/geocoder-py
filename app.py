@@ -19,8 +19,8 @@ def success():
     if request.method=="POST":
         file=request.files["file"]
         if len(file.filename) > 0:
-            file.save("/uploads/uploaded" + file.filename)
-            if generate_table("/uploads/uploaded" + file.filename) == "Error":
+            file.save("uploaded" + file.filename)
+            if generate_table("uploaded" + file.filename) == "Error":
                 return render_template("index.html",
                 text="Make sure you have an column labelled 'Address' or 'address' in your .csv file.")
             else:    
@@ -42,7 +42,7 @@ def map():
 
 @app.route('/geo_map')
 def geo_map():
-    generate_webmap("/uploads/uploaded" + file.filename)
+    generate_webmap("uploaded" + file.filename)
     return render_template("webmap.html")
 
 @app.route('/geo_table')
@@ -51,7 +51,7 @@ def geo_table():
 
 @app.route("/download")
 def download():
-    return send_file("/uploads/uploaded" + file.filename, attachment_filename="yourfile.csv", as_attachment=True)
+    return send_file("uploaded" + file.filename, attachment_filename="yourfile.csv", as_attachment=True)
 
 if __name__ == '__main__':
     app.debug=True
