@@ -42,7 +42,7 @@ def map():
 
 @app.route('/geo_map')
 def geo_map():
-    generate_webmap()
+    generate_webmap("uploads/uploaded" + file.filename)
     return render_template("webmap.html")
 
 @app.route('/geo_table')
@@ -51,7 +51,7 @@ def geo_table():
 
 @app.route("/download")
 def download():
-    return send_file("data/geocoding_data.csv", attachment_filename="yourfile.csv", as_attachment=True)
+    return send_file("uploads/uploaded" + file.filename, attachment_filename="yourfile.csv", as_attachment=True)
 
 if __name__ == '__main__':
     app.debug=True

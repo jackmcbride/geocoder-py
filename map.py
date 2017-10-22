@@ -32,8 +32,8 @@ def set_zoom(df):
 
     
 
-def generate_webmap():
-    df=pandas.read_csv("data/geocoding_data.csv")
+def generate_webmap(file):
+    df=pandas.read_csv(file)
     df.columns = map(str.lower, df.columns)
 
     if "employees" in df:
