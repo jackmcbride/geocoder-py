@@ -20,6 +20,11 @@ def success():
         file=request.files["file"]
         if len(file.filename) > 0:
             file.save("uploads/uploaded_data.csv")
+            #Generate table
+            generate_table("uploads/uploaded_data.csv")
+            #Generate webma[]
+            generate_webmap("uploads/uploaded_data.csv")
+            #Display table
             if generate_table("uploads/uploaded_data.csv") == "Error":
                 return render_template("index.html",
                 text="Make sure you have an column labelled 'Address' or 'address' in your .csv file.")
@@ -32,13 +37,11 @@ def success():
 
 @app.route('/table')
 def table():
-    generate_table("uploads/uploaded_data.csv")
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
 @app.route('/map')
 def map():
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 

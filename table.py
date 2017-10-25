@@ -34,7 +34,7 @@ def generate_table(file):
 
     df.columns = map(str.title, df.columns)
 
-    df.to_csv(file)
+    df.to_csv(file, index=False)
 
     with open('templates/table.html', 'w') as fo:
         fo.write('<head><link href = "../static/main.css" rel="stylesheet"/> </head>')
