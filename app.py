@@ -42,7 +42,7 @@ def map():
 
 @app.route('/geo_map')
 def geo_map():
-    generate_webmap("uploads/uploaded" + file.filename)
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("webmap.html")
 
 @app.route('/geo_table')
