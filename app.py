@@ -42,20 +42,28 @@ def success():
 
 @app.route('/table')
 def table():
+    generate_table("uploads/uploaded_data.csv")
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
 @app.route('/map')
 def map():
+    generate_table("uploads/uploaded_data.csv")
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 
 @app.route('/view_map')
 def view_map():
+    generate_table("uploads/uploaded_data.csv")
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("webmap.html")
 
 @app.route('/view_table')
 def view_table():
+    generate_table("uploads/uploaded_data.csv")
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("table.html")
 
 @app.route("/download")
