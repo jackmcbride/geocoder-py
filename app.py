@@ -7,11 +7,16 @@ import pandas
 from table import generate_table
 from map import generate_webmap
 from time import sleep
+import os
 
 app=Flask(__name__)
 
 @app.route('/')
 def index():
+    try:
+        os.remove("uploads/uploaded_data.csv")
+    except OSError:
+        pass
     return render_template("index.html", text="Selected file must be a .csv file.")
 
 @app.route('/success', methods=["POST"])
@@ -21,6 +26,8 @@ def success():
         file=request.files["file"]
         if len(file.filename) > 0:
             file.save("uploads/uploaded_data.csv")
+            generate_table("uploads/uploaded_data.csv")
+            generate_webmap("uploads/uploaded_data.csv")
             #Display table
             if generate_table("uploads/uploaded_data.csv") == "Error":
                 return render_template("index.html",
@@ -35,13 +42,11 @@ def success():
 
 @app.route('/table')
 def table():
-    generate_table("uploads/uploaded_data.csv")
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
 @app.route('/map')
 def map():
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 
