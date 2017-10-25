@@ -15,8 +15,6 @@ app=Flask(__name__)
 def index():
     try:
         os.remove("uploads/uploaded_data.csv")
-        os.remove("templates/table.html")
-        os.remove("templates/webmap.html")
     except OSError:
         pass
     return render_template("index.html", text="Selected file must be a .csv file.")
