@@ -15,6 +15,8 @@ app=Flask(__name__)
 def index():
     try:
         os.remove("uploads/uploaded_data.csv")
+        os.remove("templates/table.html")
+        os.remove("templates/webmap.html")
     except OSError:
         pass
     return render_template("index.html", text="Selected file must be a .csv file.")
@@ -33,7 +35,6 @@ def success():
                 return render_template("index.html",
                 text="Make sure you have an column labelled 'Address' or 'address' in your .csv file.")
             else:
-                generate_table("uploads/uploaded_data.csv")   
                 return render_template("success.html",
                 table="table_frame.html", btns="button_panel.html")
         else:
@@ -42,28 +43,20 @@ def success():
 
 @app.route('/table')
 def table():
-    generate_table("uploads/uploaded_data.csv")
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
 @app.route('/map')
 def map():
-    generate_table("uploads/uploaded_data.csv")
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 
 @app.route('/view_map')
 def view_map():
-    generate_table("uploads/uploaded_data.csv")
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("webmap.html")
 
 @app.route('/view_table')
 def view_table():
-    generate_table("uploads/uploaded_data.csv")
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("table.html")
 
 @app.route("/download")
