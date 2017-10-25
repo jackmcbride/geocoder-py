@@ -43,7 +43,6 @@ def success():
 
 @app.route('/table')
 def table():
-    
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
