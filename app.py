@@ -28,7 +28,7 @@ def success():
             else:
                 generate_table("uploads/uploaded_data.csv")
                 generate_webmap("uploads/uploaded_data.csv")
-                sleep(5)    
+                sleep(3)    
                 return render_template("success.html",
                 table="table_frame.html", btns="button_panel.html")
         else:
@@ -47,14 +47,12 @@ def map():
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 
-@app.route('/geo_map')
-def geo_map():
-    generate_webmap("uploads/uploaded_data.csv")
+@app.route('/view_map')
+def view_map():
     return render_template("webmap.html")
 
-@app.route('/geo_table')
-def geo_table():
-    generate_table("uploads/uploaded_data.csv")
+@app.route('/view_table')
+def view_table():
     return render_template("table.html")
 
 @app.route("/download")
