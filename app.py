@@ -33,12 +33,12 @@ def success():
 @app.route('/table')
 def table():
     return render_template("success.html", table="table_frame.html", 
-    download_btn="download.html", btns="button_panel.html")
+                            btns="button_panel.html")
 
 @app.route('/map')
 def map():
     return render_template("success.html", map="map_frame.html",
-    download_btn="download.html", btns="button_panel.html")
+    btns="button_panel.html")
 
 @app.route('/geo_map')
 def geo_map():
