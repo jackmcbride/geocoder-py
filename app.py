@@ -32,11 +32,13 @@ def success():
 
 @app.route('/table')
 def table():
+    generate_table("uploads/uploaded_data.csv")
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
 @app.route('/map')
 def map():
+    generate_webmap("uploads/uploaded_data.csv")
     return render_template("success.html", map="map_frame.html",
     btns="button_panel.html")
 
@@ -47,6 +49,7 @@ def geo_map():
 
 @app.route('/geo_table')
 def geo_table():
+    generate_table("uploads/uploaded_data.csv")
     return render_template("table.html")
 
 @app.route("/download")
