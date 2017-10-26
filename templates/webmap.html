@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_12b419bc940f48e6b5eef9a15cda639d {
+            <style> #map_b09769c7ffa647f28f59d02f063aa822 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -27,7 +27,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_12b419bc940f48e6b5eef9a15cda639d" ></div>
+            <div class="folium-map" id="map_b09769c7ffa647f28f59d02f063aa822" ></div>
         
 </body>
 <script>    
@@ -37,9 +37,9 @@
                 var bounds = null;
             
 
-            var map_12b419bc940f48e6b5eef9a15cda639d = L.map(
-                                  'map_12b419bc940f48e6b5eef9a15cda639d',
-                                  {center: [37.756648,-122.429375],
+            var map_b09769c7ffa647f28f59d02f063aa822 = L.map(
+                                  'map_b09769c7ffa647f28f59d02f063aa822',
+                                  {center: [37.7570511,-122.4188036],
                                   zoom: 11,
                                   maxBounds: bounds,
                                   layers: [],
@@ -49,7 +49,7 @@
             
         
     
-            var tile_layer_c67917d327f046b58ca6daf2048d857f = L.tileLayer(
+            var tile_layer_78b0e69f38254a9c9c3a646abed7c2ed = L.tileLayer(
                 'https://{s}.tiles.mapbox.com/v3/mapbox.world-bright/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -59,15 +59,48 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_12b419bc940f48e6b5eef9a15cda639d);
+                ).addTo(map_b09769c7ffa647f28f59d02f063aa822);
         
     
-            var feature_group_444ec092cf3f482284e6f2919779321c = L.featureGroup(
-                ).addTo(map_12b419bc940f48e6b5eef9a15cda639d);
+            var feature_group_55581be775a24438b2fdd6e5eb98e899 = L.featureGroup(
+                ).addTo(map_b09769c7ffa647f28f59d02f063aa822);
         
     
-            var circle_marker_0a861ee3e40e4622a3cb8f803e70d4f4 = L.circleMarker(
-                [37.756648,-122.429375],
+            var circle_marker_74b726dfea7b429dbb60a1ebea776999 = L.circleMarker(
+                [37.7570511,-122.4188036],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3388ff",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
+            
+    
+            var popup_825e5c8a09ae42da819cb6ba0ec90034 = L.popup({maxWidth: '300'});
+
+            
+                var html_816e207b883a4860a755ce7bdf8d7932 = $('<div id="html_816e207b883a4860a755ce7bdf8d7932" style="width: 100.0%; height: 100.0%;">Madeira: 3666 21st St CA 94114, Employees: 8</div>')[0];
+                popup_825e5c8a09ae42da819cb6ba0ec90034.setContent(html_816e207b883a4860a755ce7bdf8d7932);
+            
+
+            circle_marker_74b726dfea7b429dbb60a1ebea776999.bindPopup(popup_825e5c8a09ae42da819cb6ba0ec90034);
+
+            
+        
+    
+            var circle_marker_aadf975bcb124a9ebfc6cb939426350d = L.circleMarker(
+                [37.7414969,-122.4240961],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -84,23 +117,23 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_444ec092cf3f482284e6f2919779321c);
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
             
     
-            var popup_c772ad450bb0404e832ae92808025331 = L.popup({maxWidth: '300'});
+            var popup_6960c1d64eeb4301a99a91333f4841d5 = L.popup({maxWidth: '300'});
 
             
-                var html_367455de98a64bc287a073d7dade29b4 = $('<div id="html_367455de98a64bc287a073d7dade29b4" style="width: 100.0%; height: 100.0%;">Madeira: 3666 21st St San Francisco CA 94114 USA, Employees: 8</div>')[0];
-                popup_c772ad450bb0404e832ae92808025331.setContent(html_367455de98a64bc287a073d7dade29b4);
+                var html_733f3770c9394a398ca53177ff715c62 = $('<div id="html_733f3770c9394a398ca53177ff715c62" style="width: 100.0%; height: 100.0%;">Bready Shop: 735 Dolores St CA 94114, Employees: 15</div>')[0];
+                popup_6960c1d64eeb4301a99a91333f4841d5.setContent(html_733f3770c9394a398ca53177ff715c62);
             
 
-            circle_marker_0a861ee3e40e4622a3cb8f803e70d4f4.bindPopup(popup_c772ad450bb0404e832ae92808025331);
+            circle_marker_aadf975bcb124a9ebfc6cb939426350d.bindPopup(popup_6960c1d64eeb4301a99a91333f4841d5);
 
             
         
     
-            var circle_marker_adba2771628b448a879fcdfc4267bffd = L.circleMarker(
-                [37.757819,-122.425337],
+            var circle_marker_a969373de35b42219280ea7c3b89426f = L.circleMarker(
+                [37.756102,-122.421041],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -117,23 +150,89 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_444ec092cf3f482284e6f2919779321c);
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
             
     
-            var popup_d18e8f8a01c64a26b75665b6de5001e5 = L.popup({maxWidth: '300'});
+            var popup_28d5615ecb204807b52857a06132f374 = L.popup({maxWidth: '300'});
 
             
-                var html_414817d8702a49eab0339cab97373c45 = $('<div id="html_414817d8702a49eab0339cab97373c45" style="width: 100.0%; height: 100.0%;">Bready Shop: 735 Dolores St San Francisco CA 94119 USA, Employees: 15</div>')[0];
-                popup_d18e8f8a01c64a26b75665b6de5001e5.setContent(html_414817d8702a49eab0339cab97373c45);
+                var html_4a9690e0c7a54b52bd08b02a739750c6 = $('<div id="html_4a9690e0c7a54b52bd08b02a739750c6" style="width: 100.0%; height: 100.0%;">Super River: 332 Hill St CA 94114, Employees: 25</div>')[0];
+                popup_28d5615ecb204807b52857a06132f374.setContent(html_4a9690e0c7a54b52bd08b02a739750c6);
             
 
-            circle_marker_adba2771628b448a879fcdfc4267bffd.bindPopup(popup_d18e8f8a01c64a26b75665b6de5001e5);
+            circle_marker_a969373de35b42219280ea7c3b89426f.bindPopup(popup_28d5615ecb204807b52857a06132f374);
 
             
         
     
-            var circle_marker_6b7b42cbf1c34d8f9f946cc38f197f71 = L.circleMarker(
-                [37.755875,-122.428816],
+            var circle_marker_d042f28b57c84a06a8e21cbb28b16e48 = L.circleMarker(
+                [37.7529648,-122.4317141],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3388ff",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
+            
+    
+            var popup_1404fb949c3c4f309aa888189af6bbcb = L.popup({maxWidth: '300'});
+
+            
+                var html_8407933471b54f4aaaf056ba37043494 = $('<div id="html_8407933471b54f4aaaf056ba37043494" style="width: 100.0%; height: 100.0%;">Ben’s Shop: 3995 23rd CA 94114, Employees: 10</div>')[0];
+                popup_1404fb949c3c4f309aa888189af6bbcb.setContent(html_8407933471b54f4aaaf056ba37043494);
+            
+
+            circle_marker_d042f28b57c84a06a8e21cbb28b16e48.bindPopup(popup_1404fb949c3c4f309aa888189af6bbcb);
+
+            
+        
+    
+            var circle_marker_40c9946db2fe4026a4da43686dc0c56d = L.circleMarker(
+                [37.748362,-122.429346],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3388ff",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 6,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
+            
+    
+            var popup_08d57bf14cfc4373a737bf185f03d015 = L.popup({maxWidth: '300'});
+
+            
+                var html_10ee77f47b4b4080a89a69f325d28823 = $('<div id="html_10ee77f47b4b4080a89a69f325d28823" style="width: 100.0%; height: 100.0%;">Sanchez: 1056 Sanchez St CA 94114, Employees: 12</div>')[0];
+                popup_08d57bf14cfc4373a737bf185f03d015.setContent(html_10ee77f47b4b4080a89a69f325d28823);
+            
+
+            circle_marker_40c9946db2fe4026a4da43686dc0c56d.bindPopup(popup_08d57bf14cfc4373a737bf185f03d015);
+
+            
+        
+    
+            var circle_marker_0c53020400db4b6cbe77afc709b3fc93 = L.circleMarker(
+                [37.74891695,-122.45699975],
                 {
   "bubblingMouseEvents": true,
   "color": "#3388ff",
@@ -150,97 +249,31 @@
   "stroke": true,
   "weight": 3
 }
-                ).addTo(feature_group_444ec092cf3f482284e6f2919779321c);
+                ).addTo(feature_group_55581be775a24438b2fdd6e5eb98e899);
             
     
-            var popup_022751ee22c745b58bdfc784ea6fa776 = L.popup({maxWidth: '300'});
+            var popup_b03f2bc3ac72489783e224dd69430202 = L.popup({maxWidth: '300'});
 
             
-                var html_1dcaade9bbf748138939e945209ce666 = $('<div id="html_1dcaade9bbf748138939e945209ce666" style="width: 100.0%; height: 100.0%;">Super River: 332 Hill St San Francisco California 94114 USA, Employees: 25</div>')[0];
-                popup_022751ee22c745b58bdfc784ea6fa776.setContent(html_1dcaade9bbf748138939e945209ce666);
+                var html_48bbe35db9e743abaa29e16aa9fe81af = $('<div id="html_48bbe35db9e743abaa29e16aa9fe81af" style="width: 100.0%; height: 100.0%;">Stonestown Galleria: 375 Laguna Honda Blvd CA 94116, Employees: 40</div>')[0];
+                popup_b03f2bc3ac72489783e224dd69430202.setContent(html_48bbe35db9e743abaa29e16aa9fe81af);
             
 
-            circle_marker_6b7b42cbf1c34d8f9f946cc38f197f71.bindPopup(popup_022751ee22c745b58bdfc784ea6fa776);
+            circle_marker_0c53020400db4b6cbe77afc709b3fc93.bindPopup(popup_b03f2bc3ac72489783e224dd69430202);
 
             
         
     
-            var circle_marker_976b1f364a4f46dea3a849ed57c5ab6f = L.circleMarker(
-                [37.7529353,-122.4317224],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_444ec092cf3f482284e6f2919779321c);
-            
-    
-            var popup_a9809b95777d485aa44989012f4f25d2 = L.popup({maxWidth: '300'});
-
-            
-                var html_7cbd1ecb78904b9faed64aa31dbddd9e = $('<div id="html_7cbd1ecb78904b9faed64aa31dbddd9e" style="width: 100.0%; height: 100.0%;">Ben’s Shop: 3995 23rd St San Francisco CA 94114 USA, Employees: 10</div>')[0];
-                popup_a9809b95777d485aa44989012f4f25d2.setContent(html_7cbd1ecb78904b9faed64aa31dbddd9e);
-            
-
-            circle_marker_976b1f364a4f46dea3a849ed57c5ab6f.bindPopup(popup_a9809b95777d485aa44989012f4f25d2);
-
-            
-        
-    
-            var circle_marker_a2e37f34f9684f54b877be5c22d93548 = L.circleMarker(
-                [37.752131,-122.430028],
-                {
-  "bubblingMouseEvents": true,
-  "color": "#3388ff",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "orange",
-  "fillOpacity": 0.7,
-  "fillRule": "evenodd",
-  "lineCap": "round",
-  "lineJoin": "round",
-  "opacity": 1.0,
-  "radius": 6,
-  "stroke": true,
-  "weight": 3
-}
-                ).addTo(feature_group_444ec092cf3f482284e6f2919779321c);
-            
-    
-            var popup_b170a2fdc634417da378c1c1fc40ce24 = L.popup({maxWidth: '300'});
-
-            
-                var html_56980a2b773a431eb5a32868ade4768b = $('<div id="html_56980a2b773a431eb5a32868ade4768b" style="width: 100.0%; height: 100.0%;">Sanchez: 1056 Sanchez St San Francisco California USA, Employees: 12</div>')[0];
-                popup_b170a2fdc634417da378c1c1fc40ce24.setContent(html_56980a2b773a431eb5a32868ade4768b);
-            
-
-            circle_marker_a2e37f34f9684f54b877be5c22d93548.bindPopup(popup_b170a2fdc634417da378c1c1fc40ce24);
-
-            
-        
-    
-            var layer_control_40937d73deec4346b7a2863e0e3e6978 = {
-                base_layers : { "mapboxbright" : tile_layer_c67917d327f046b58ca6daf2048d857f, },
-                overlays : { "Business" : feature_group_444ec092cf3f482284e6f2919779321c, }
+            var layer_control_fabe25f06bca42309db26df869d2e81e = {
+                base_layers : { "mapboxbright" : tile_layer_78b0e69f38254a9c9c3a646abed7c2ed, },
+                overlays : { "Business" : feature_group_55581be775a24438b2fdd6e5eb98e899, }
                 };
             L.control.layers(
-                layer_control_40937d73deec4346b7a2863e0e3e6978.base_layers,
-                layer_control_40937d73deec4346b7a2863e0e3e6978.overlays,
+                layer_control_fabe25f06bca42309db26df869d2e81e.base_layers,
+                layer_control_fabe25f06bca42309db26df869d2e81e.overlays,
                 {position: 'topright',
                  collapsed: true,
                  autoZIndex: true
-                }).addTo(map_12b419bc940f48e6b5eef9a15cda639d);
+                }).addTo(map_b09769c7ffa647f28f59d02f063aa822);
         
 </script>

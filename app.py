@@ -2,21 +2,17 @@ from flask import Flask, render_template, request, send_file
 import requests
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
-from werkzeug import secure_filename
 import pandas
 from table import generate_table
 from map import generate_webmap
-from time import sleep
+import datetime
 import os
+import glob
 
 app=Flask(__name__)
 
 @app.route('/')
 def index():
-    try:
-        os.remove("uploads/uploaded_data.csv")
-    except OSError:
-        pass
     return render_template("index.html", text="Selected file must be a .csv file.")
 
 @app.route('/success', methods=["POST"])
@@ -25,11 +21,9 @@ def success():
     if request.method=="POST":
         file=request.files["file"]
         if len(file.filename) > 0:
-            file.save("uploads/uploaded_data.csv")
-            generate_table("uploads/uploaded_data.csv")
-            generate_webmap("uploads/uploaded_data.csv")
-            #Display table
-            if generate_table("uploads/uploaded_data.csv") == "Error":
+            filename=datetime.datetime.now().strftime("uploads/%Y-%m-%d-%H-%M-%S-%f"+".csv")
+            file.save(filename)
+            if generate_table(filename) == "Error":
                 return render_template("index.html",
                 text="Make sure you have an column labelled 'Address' or 'address' in your .csv file.")
             else:
@@ -46,22 +40,26 @@ def table():
 
 @app.route('/map')
 def map():
+    generate_webmap(get_latest_file())
     return render_template("success.html", map="map_frame.html",
-    btns="button_panel.html")
+                           btns="button_panel.html")
 
 @app.route('/view_map')
 def view_map():
-    generate_webmap("uploads/uploaded_data.csv")
     return render_template("webmap.html")
 
 @app.route('/view_table')
 def view_table():
-    generate_table("uploads/uploaded_data.csv")
     return render_template("table.html")
 
 @app.route("/download")
 def download():
-    return send_file("uploads/uploaded_data.csv", attachment_filename="yourfile.csv", as_attachment=True)
+    return send_file(get_latest_file(), attachment_filename="yourfile.csv", as_attachment=True)
+
+def get_latest_file():
+    list_of_files = glob.glob('uploads/*')
+    latest_file = max(list_of_files, key=os.path.getctime)
+    return latest_file
 
 if __name__ == '__main__':
     app.debug=True
