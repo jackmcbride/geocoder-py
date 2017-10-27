@@ -1,7 +1,5 @@
 import folium
 import pandas
-import io
-import math
 
 def generate_webmap(file):
     df=pandas.read_csv(file)

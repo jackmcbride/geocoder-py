@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, send_file
 import requests
-from flask.ext.sqlalchemy import SQLAlchemy
-from sqlalchemy.sql import func
 import pandas
 from table import generate_table
 from map import generate_webmap
@@ -13,6 +11,12 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
+    try:
+        os.remove("templates/table.html")
+        os.remove("templates/webmap.html")
+        os.remove("uploads/*")
+    except OSError:
+        pass
     return render_template("index.html", text="Selected file must be a .csv file.")
 
 @app.route('/success', methods=["POST"])
