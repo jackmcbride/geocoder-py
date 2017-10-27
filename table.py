@@ -14,7 +14,8 @@ def generate_table(file):
     df['longitude'] = df['coordinates'].apply(lambda x: x.longitude if x != None else None)
 
     df=df.drop("coordinates",1)
-    df=df.drop("id",1)
+    if df["id"] is not None:
+        df=df.drop("id",1)
 
     df.columns = map(str.capitalize, df.columns)
     df.to_csv(file,index=None)
