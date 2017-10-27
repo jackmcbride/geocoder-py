@@ -35,6 +35,7 @@ def success():
 
 @app.route('/table')
 def table():
+    generate_table(get_latest_file())
     return render_template("success.html", table="table_frame.html", 
                             btns="button_panel.html")
 
