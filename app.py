@@ -40,17 +40,16 @@ def table():
 
 @app.route('/map')
 def map():
+    generate_webmap(get_latest_file())
     return render_template("success.html", map="map_frame.html",
                            btns="button_panel.html")
 
 @app.route('/view_map')
 def view_map():
-    generate_webmap(get_latest_file())
     return render_template("webmap.html")
 
 @app.route('/view_table')
 def view_table():
-    generate_table(get_latest_file())
     return render_template("table.html")
 
 @app.route("/download")
